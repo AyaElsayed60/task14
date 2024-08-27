@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import './GitHubUser.css';
 import iconCompany from '../../images/icon-company.svg';
 import iconLocation from '../../images/icon-location.svg';
-import iconMoon from '../../images/icon-moon.svg';
 import iconSearch from '../../images/icon-search.svg';
 import iconSun from '../../images/icon-sun.svg';
 import iconTwitter from '../../images/icon-twitter.svg';
