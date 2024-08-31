@@ -191,6 +191,7 @@ body {
 @media (max-width: 600px) {
     .container {
         padding-top: 100px; /* Set padding to 100px on small screens */
+       
     }
 
     .top-bar {
@@ -229,5 +230,12 @@ body {
 
     .footer-item {
         justify-content: flex-start;
+    }
+    .card {
+        width: 100%; /* Make the card width 100% of the screen width */
+        border: 1px solid #0079ff; /* Change border color or style as needed */
+        padding: 15px; /* Adjust padding to fit better on small screens */
+        border-radius: 10px; /* Make border radius smaller if needed */
+        box-sizing: border-box; /* Ensure padding is included in the width */
     }
 }
