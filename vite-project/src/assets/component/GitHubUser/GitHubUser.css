@@ -186,6 +186,7 @@ body {
     text-decoration: underline;
 }
 
+
 /* Responsive Design for Small Screens */
 @media (max-width: 600px) {
     .container {

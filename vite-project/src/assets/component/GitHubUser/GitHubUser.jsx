@@ -6,6 +6,8 @@ import iconSearch from '../../images/icon-search.svg';
 import iconSun from '../../images/icon-sun.svg';
 import iconTwitter from '../../images/icon-twitter.svg';
 import iconWebsite from '../../images/icon-website.svg';
+import defaultAvatar from '../../images/favicon-32x32.png';
+
 
 function GitHubUser() {
     const [username, setUsername] = useState('');
@@ -34,7 +36,6 @@ function GitHubUser() {
 
     return (
         <div className="container">
-            {/* Top Bar with Branding and Theme Toggle */}
             <div className="top-bar">
                 <h1>devfinder</h1>
                 <div className="theme-toggle">
@@ -43,7 +44,6 @@ function GitHubUser() {
                 </div>
             </div>
 
-            {/* Search Bar */}
             <div className="search-bar">
                 <div className="input-container">
                     <img src={iconSearch} alt="Search" className="search-icon" />
@@ -59,15 +59,18 @@ function GitHubUser() {
                 </button>
             </div>
             
-            {/* User Data Card */}
             {userData && (
                 <div className="card">
                     <div className="card-header">
-                        <img src={userData.avatar_url} alt={userData.login} className="avatar" />
-                        <div className="user-info">
+                    <img 
+                            src={userData.avatar_url || defaultAvatar} 
+                            alt={userData.login} 
+                            className="avatar" 
+                        />                        <div className="user-info">
                             <h2>{userData.name || 'The Octocat'}</h2>
                             <h3>@{userData.login}</h3>
                             <p>{userData.bio || 'This profile has no bio'}</p>
+                            <p className="join-date">Joined {new Date(userData.created_at).toLocaleDateString()}</p>
                         </div>
                     </div>
                     <div className="card-stats">
@@ -115,5 +118,4 @@ function GitHubUser() {
         </div>
     );
 }
-
 export default GitHubUser;
